@@ -8,9 +8,9 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8999/eureka/
+      defaultZone: http://13.238.86.167:8999/eureka/
   instance:
-    hostname: localhost
+    hostname: 13.238.86.167
 
 management:
   health:
