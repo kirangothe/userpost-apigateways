@@ -9,10 +9,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the Spring Boot application JAR file from the build stage
-COPY --from=build /app/target/eureka-server-0.0.1-SNAPSHOT.jar /app/eureka-server.jar
+COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.jar /app/api-gateway.jar
 
 # Expose the port that the Spring Boot application will run on
-EXPOSE 8095
+EXPOSE 9000
 
 # Start the Spring Boot application
-CMD ["java", "-jar", "eureka-server.jar"]
+CMD ["java", "-jar", "api-gateway.jar"]
